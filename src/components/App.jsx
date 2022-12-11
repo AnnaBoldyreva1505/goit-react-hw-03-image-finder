@@ -36,7 +36,9 @@ class App extends Component {
     return (
       <div>
         <Searchbar onSubmit={this.onFormSubmit} />
- <ImageGallery images={this.state.images} />
+        <ToastContainer position="top-center" hideProgressBar autoClose={500} />
+        <ImageGallery images={this.state.images} />
+        
         {/* <button type='button' onClick={this.toggleModal}>Открыть</button> 
             <ImageGallery images={this.state.images} openModal={this.openModal} />
             {this.state.showModal && <Modal onClose={this.toggleModal}> 
@@ -46,7 +48,7 @@ class App extends Component {
 
           <button type="button" onClick={this.toggleModal}>Закрыть</button></Modal>}
     
-        <ToastContainer position="top-center" hideProgressBar autoClose={500} /> */}
+         */}
       </div>
     )
   }
