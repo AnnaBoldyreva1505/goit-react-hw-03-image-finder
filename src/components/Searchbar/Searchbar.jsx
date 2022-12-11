@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import css from './Searchbar.module.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
 export class SearchBar extends Component {
   state = {
     search: '',
+    images: [],
   };
 
   onFormSubmitHandler = e => {
