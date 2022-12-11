@@ -1,7 +1,9 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import css from './Button.module.css';
+
 
 export const Button = ({ text, onNextFetch }) => {
-    return <button onClick={onNextFetch}>{text}</button>
+    return <button className={css.Button}  onClick={onNextFetch}>{text}</button>
 }
 
 

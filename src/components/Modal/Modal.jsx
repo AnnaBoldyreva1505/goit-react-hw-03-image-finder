@@ -15,32 +15,32 @@ class Modal extends Component {
 
   handleKeyDown = e => {
     if (e.code === 'Escape') {
-      this.props.onClose();
+      this.props.closeModal();
     }
   };
 
   handleBackdropClick = event => {
     if (event.currentTarget === event.target) {
-      this.props.onClose();
+      this.props.closeModal();
     }
   };
 
     render() {
         return createPortal(
             <div className={css.Overlay} onClick={this.handleBackdropClick}>
-                <div className={css.Modal} >{this.props.children}
-                    <img src="https://klike.net/uploads/posts/2019-05/1556708032_1.jpg" width="200" />
+                <div className={css.Modal} >
+                    <img src={this.props.currentImage} alt="" width="800" />
                 </div>
       </div>,
       modalRoot
     );
     }
-//     static propTypes = {
-//     title: PropTypes.string,
-//     onClose: PropTypes.func.isRequired,
-//     currentImageUrl: PropTypes.string,
-//     currentImageDescription: PropTypes.string,
-//   };
+    static propTypes = {
+    title: PropTypes.string,
+    onClose: PropTypes.func.isRequired,
+    currentImageUrl: PropTypes.string,
+    currentImageDescription: PropTypes.string,
+  };
 }
 
 export default Modal;

@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
+import css from './Loader.module.css';
 import { InfinitySpin } from 'react-loader-spinner'
 
-const Loader = () => {
+export const Loader = () => {
   return (
-    <div>
+    <div  className={css.Loader}>
       <InfinitySpin 
   width='200'
-  color="#1f15d8"
+        color="#a41fdc"
+       
 />
     </div>
   );
