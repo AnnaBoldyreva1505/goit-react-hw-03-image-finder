@@ -1,9 +1,8 @@
-
 import css from './Button.module.css';
 
 
-export const Button = ({ text, onNextFetch }) => {
-    return <button className={css.Button}  onClick={onNextFetch}>{text}</button>
+export const Button = ({ text, nextPage }) => {
+    return <button className={css.Button}  onClick={nextPage}>{text}</button>
 }
 
 
